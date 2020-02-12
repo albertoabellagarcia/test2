@@ -4,6 +4,3 @@
 [submodule "test3"]
 	path = test3
 	url = https://github.com/albertoabellagarcia/test3.git
-[submodule "synchronicity-data-models"]
-	path = synchronicity-data-models
-	url = https://gitlab.com/synchronicity-iot/synchronicity-data-models.git
