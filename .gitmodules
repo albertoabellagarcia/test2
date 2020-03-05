@@ -4,6 +4,3 @@
 [submodule "test3"]
 	path = test3
 	url = https://github.com/albertoabellagarcia/test3.git
-[submodule "synchronicity"]
-	path = synchronicity
-	url = https://github.com/albertoabellagarcia/synchronicity.git
