@@ -1,0 +1,169 @@
+# IMPORTS
+import os
+import datetime
+import time
+
+from subprocess import call
+import subprocess
+
+# to start the control you need to make these steps
+# 1) choose a local folder
+# 2) create subdirectory  in it i.e. myweb
+# 3) create inside myweb a subdirectory .log
+# 4) cd myweb and create a repo by git init
+# 5) create a file .gitignore with the contents below 
+# 6) update the configuration parameters
+
+#.GITIGNORE
+#/.log/*
+#.ipynb_checkpoints/*.*
+#antivirus-git.ipynb
+
+#7) program daily to run the script
+
+def remove_chars(chain):
+    return(str(chain).replace("\n",chr(10)).replace("\r",chr(10)))
+
+def sendmail(subject, message, receiver):
+# The first step is always the same: import all necessary components:
+    import smtplib
+    from socket import gaierror
+
+# Now you can play with your code. Let’s define the SMTP server separately here:
+    port = 587
+    smtp_server = "mail.iniciativabarcelonaopendata.cat"
+    login = "alberto@iniciativabarcelonaopendata.cat" 
+    password = "W0rldm4n--" 
+
+# Specify the sender’s and receiver’s email addresses:
+    sender = "alberto@iniciativabarcelonaopendata.cat"
+    #receiver = "alberto@iniciativabarcelonaopendata.cat"
+
+# Type your message: use two newlines (\n) to separate the subject from the message body, and use 'f' to  automatically insert variables in the text
+    raw_message = f"""\
+Subject: Mailtrap
+To: {receiver}
+From: {sender}
+message"""
+    raw_message=raw_message.replace("Mailtrap",subject).replace("message",message)
+
+    try:
+        # Send your message with credentials specified above
+        with smtplib.SMTP(smtp_server, port) as server:
+            server.login(login, password)
+            server.sendmail(sender, receiver, raw_message)
+    except (gaierror, ConnectionRefusedError):
+        # tell the script to report if your message was sent or which errors need to be fixed
+        return('Failed to connect to the server. Bad connection settings?')
+    except smtplib.SMTPServerDisconnected:
+        return('Failed to connect to the server. Wrong user/password?')
+    except smtplib.SMTPException as e:
+        return('SMTP error occurred: ' + str(e))
+    else:
+        return('Sent')
+
+# CREDENTIALS 
+local_directory = "/home/aabella/transparentia/PRODUCTS/HACKING/ANTIVIRUS-GIT"
+remote_directory="public_html/cgi-bin"
+user = "barcelt2@barcelonaopendata.com"
+short_user="barcelt2"
+password = "Ibcnod18&&"
+server = "ftp.barcelonaopendata.com"
+port="21"
+temp_zip_file="foo.zip"
+temp_dir="iniciativabarcelonaopendata.cat"
+
+# COMMANDS
+command=[]
+
+
+# 0 - zip all the contents
+ssh_command="sshpass -p '" + password + "' ssh -tt " + user + " " + chr(34)+" cd " + remote_directory + " && zip -r " + temp_zip_file +" . && exit"+chr(34)
+command.append(ssh_command)
+
+# 1 - clear target directory keeping repository and logs
+command.append("cd " + local_directory + "/" + temp_dir + " && GLOBIGNORE='.git | .log' & rm -rf *" ) 
+
+
+# 2 - retrieve the zip file
+command.append("sshpass -p '" + password + "' scp " + user  + ":" + remote_directory + "/" + temp_zip_file +  " ./" + temp_dir + "/" + temp_zip_file)
+
+# 3 - unzip the file
+command.append("unzip -o " + local_directory + "/" + temp_dir + "/" + temp_zip_file + " -d " + local_directory + "/" + temp_dir )
+
+# 4 - remove remote file
+ssh_command="sshpass -p '" + password + "' ssh -tt " + user + " " + chr(34) + "cd " + remote_directory + " && rm " + temp_zip_file +" && exit "+chr(34)
+command.append(ssh_command)
+
+# 5 - remove the local file
+command.append("cd " + local_directory + "/" + temp_dir + " && " +"rm " + local_directory + "/" + temp_dir + "/" + temp_zip_file)
+
+# 6 - Add files to repository
+command.append("cd " + local_directory + "/" + temp_dir +" && " + "git add --all")
+
+# 7 - Commit the files
+ts = time.time()
+current_time = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d_%H-%M-%S')
+command.append("cd " + local_directory + "/" + temp_dir + " && " + "git commit -m " + chr(34) + "reviewed on the " + str(current_time) + chr(34))
+
+
+# 8 - finding new files added
+addedfiles_file_name="added_"+str(current_time)+".txt"
+command.append("cd " + local_directory + "/" + temp_dir + " && " + "git diff --diff-filter=A --name-only HEAD^ HEAD > " + "./.log/" + addedfiles_file_name)
+
+# 9 - finding modified files
+modifiedfiles_file_name="modified_"+str(current_time)+".txt"
+command.append("cd " + local_directory + "/" + temp_dir + " && " + "git diff --diff-filter=M --name-only HEAD^ HEAD > " + "./.log/" + modifiedfiles_file_name)
+
+# 10 - finding files removed
+removedfiles_file_name="removed_"+str(current_time)+".txt"
+command.append("cd " + local_directory + "/" + temp_dir + " && " + "git diff --diff-filter=R --name-only HEAD^ HEAD > " + "./.log/" +removedfiles_file_name)
+
+# 11 - details of the changes fo futher info
+difference_file_name="difference_"+str(current_time)+".txt"
+command.append("cd " + local_directory + "/" + temp_dir + " && " + "git diff HEAD^ HEAD > "+ "./log/" + difference_file_name)
+
+# 12 - end connection with shell 
+command.append("exit")
+
+# COMMANDS EXECUTION
+for step in range(len(command)):
+    print("\n")
+    print("step " + str(step) + " " + command[step])
+    
+    ps = subprocess.Popen(command[step],shell=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+    output = ps.communicate()[0]
+    print("command output")
+    print(output.decode())
+    a=input("siguiente paso")
+print("finished")
+
+# alarm management of new php 
+#first new files
+dangerous_extensions=["php",".js", "tml"]
+added_files=[]
+with open(addedfiles_file_name,"r") as added:
+    added_files=added.read().splitlines()
+reported=""
+for file in added_files:
+    if (file[-3:] in dangerous_extensions):
+        reported = reported + file + chr(10)
+if(len(reported) > 0):
+    sendmail("dangerous files added", reported, "alberto@iniciativabarcelonaopendata.cat")
+    print("some added files reported")
+else:
+    print("nothing to report")
+
+# then existing but modified ones
+modified_files=[]
+with open(modifiedfiles_file_name,"r") as modified:
+    modified_files = modified.read().splitlines()
+reported = ""
+for file in modified_files:
+    if (file[-3:] in dangerous_extensions):
+        reported = reported + file + chr(10)
+if(len(reported) > 0):
+    sendmail("dangerous files modified", reported, "alberto@iniciativabarcelonaopendata.cat")
+    print("some modified files reported")
+else:
+    print("nothing to report")
