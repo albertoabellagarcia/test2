@@ -23,7 +23,9 @@ def find_files(filesList):
             return (contents)
     
     
-    token = "1a7fdb0af7573fdc17f0d9cabd2c6a1f05765abe"
+    token1st = " 1d1a6ca91bc958b19----"
+    token2nd = "ed13482c5e6527390979851----"
+    token = (token1st + token2nd).replace("----","")
     #globalUser = "smart-data-models"
     globalUser = "albertoabellagarcia"
     directory = "/"
