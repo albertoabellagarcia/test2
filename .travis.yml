@@ -4,9 +4,5 @@ python:
 branches:
   - master
 
-install:
-  - pip install -r requirements.txt
-  - pip install PyGithub
-
 script:
-  - pytest
+  - python app.py
