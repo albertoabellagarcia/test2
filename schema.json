@@ -20,7 +20,7 @@
           "format": "date-time"
         },
         "refObject": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "https://raw.githubusercontent.com/albertoabellagarcia/test2/master/commons-schema.json#/definitions/EntityIdentifierType"
             },
