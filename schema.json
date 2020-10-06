@@ -22,7 +22,7 @@
         "refObject": {
           "oneOf": [
             {
-              "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              "$ref": "https://raw.githubusercontent.com/albertoabellagarcia/test2/master/commons-schema.json#/definitions/EntityIdentifierType"
             },
             {
               "type": "string",
@@ -36,7 +36,7 @@
         "refTarget": {
           "oneOf": [
             {
-              "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              "$ref": "https://raw.githubusercontent.com/albertoabellagarcia/test2/master/commons-schema.json#/definitions/EntityIdentifierType"
             },
             {
               "type": "string",
@@ -47,7 +47,7 @@
         "refAgent": {
           "oneOf": [
             {
-              "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+              "$ref": "https://raw.githubusercontent.com/albertoabellagarcia/test2/master/commons-schema.json#/definitions/EntityIdentifierType"
             },
             {
               "type": "string",
