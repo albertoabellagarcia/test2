@@ -34,7 +34,7 @@
           "type": "string"
         },
         "refTarget": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "https://raw.githubusercontent.com/albertoabellagarcia/test2/master/commons-schema.json#/definitions/EntityIdentifierType"
             },
@@ -45,7 +45,7 @@
           ]
         },
         "refAgent": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "https://raw.githubusercontent.com/albertoabellagarcia/test2/master/commons-schema.json#/definitions/EntityIdentifierType"
             },
