@@ -13,19 +13,13 @@ An electrical  measurement from a system that uses three phase alternating curre
 
 ThreePhaseAcMeasurement:
 
-  description: 'An electrical  measurement from a system that uses three phase alternating
-
-    current.'
+  description: 'An electrical  measurement from a system that uses three phase alternating current.'
 
   properties:
 
     activeEnergyExport:
 
-      description: 'Active energy exported per phase since the metering start date.
-
-        The actual values will be conveyed by subproperties which names will be equal
-
-        to the name of each of the alternating current phases: L1, L2, L3.'
+      description: 'Active energy exported per phase since the metering start date. The actual values will be conveyed by subproperties which names will be equal to the name of each of the alternating current phases: L1, L2, L3.'
 
       properties:
 
@@ -57,13 +51,7 @@ ThreePhaseAcMeasurement:
 
     activeEnergyImport:
 
-      description: 'Active energy imported i.e. consumed per phase since the metering
-
-        start date. The actual values will be conveyed by subproperties which names
-
-        will be equal to the name of each of the alternating current phases: L1, L2,
-
-        L3.'
+      description: 'Active energy imported i.e. consumed per phase since the metering start date. The actual values will be conveyed by subproperties which names will be equal to the name of each of the alternating current phases: L1, L2, L3.'
 
       properties:
 
@@ -95,11 +83,7 @@ ThreePhaseAcMeasurement:
 
     activePower:
 
-      description: 'The actual values will beconveyed by subproperties which names
-
-        will be equal to the name of each of the alternating current phases: L1, L2,
-
-        L3. '
+      description: 'The actual values will beconveyed by subproperties which names will be equal to the name of each of the alternating current phases: L1, L2, L3. '
 
       properties:
 
@@ -163,11 +147,7 @@ ThreePhaseAcMeasurement:
 
     apparentEnergyExport:
 
-      description: 'Apparent energy exported per phase since the metering start date.
-
-        The actual values will be conveyed by subproperties which names will be equal
-
-        to the name of each of the alternating current phases: L1, L2, L3.'
+      description: 'Apparent energy exported per phase since the metering start date. The actual values will be conveyed by subproperties which names will be equal to the name of each of the alternating current phases: L1, L2, L3.'
 
       properties:
 
@@ -199,13 +179,7 @@ ThreePhaseAcMeasurement:
 
     apparentEnergyImport:
 
-      description: 'Apparent energy imported i.e. consumed per phase since the metering
-
-        start date. The actual values will be conveyed by subproperties which names
-
-        will be equal to the name of each of the alternating current phases: L1, L2,
-
-        L3.'
+      description: 'Apparent energy imported i.e. consumed per phase since the metering start date. The actual values will be conveyed by subproperties which names will be equal to the name of each of the alternating current phases: L1, L2, L3.'
 
       properties:
 
@@ -237,11 +211,7 @@ ThreePhaseAcMeasurement:
 
     apparentPower:
 
-      description: 'Apparent power consumed per phase. The actual values will be conveyed
-
-        by subproperties which names will be equal to the name of each of the alternating
-
-        current phases: L1, L2, L3'
+      description: 'Apparent power consumed per phase. The actual values will be conveyed by subproperties which names will be equal to the name of each of the alternating current phases: L1, L2, L3'
 
       properties:
 
@@ -277,11 +247,7 @@ ThreePhaseAcMeasurement:
 
     current:
 
-      description: 'Electrical current. The actual values will be conveyed by one
-
-        subproperty per alternating current phase and the neutral wire: L1, L2, L3
-
-        and N.'
+      description: 'Electrical current. The actual values will be conveyed by one subproperty per alternating current phase and the neutral wire: L1, L2, L3 and N.'
 
       properties:
 
@@ -343,11 +309,7 @@ ThreePhaseAcMeasurement:
 
     displacementPowerFactor:
 
-      description: 'Displacement power factor for each phase. The quantity is based
-
-        on the fundamental frequency of the system. The actual values will be conveyed
-
-        by one subproperty per alternating current phase: L1, L2 and L3'
+      description: 'Displacement power factor for each phase. The quantity is based on the fundamental frequency of the system. The actual values will be conveyed by one subproperty per alternating current phase: L1, L2 and L3'
 
       properties:
 
@@ -721,9 +683,7 @@ ThreePhaseAcMeasurement:
 
     phaseToPhaseVoltage:
 
-      description: 'Voltage between phases. A value for each phase pair: phases 1
-
-        and 2 (L12), phases 2 and 3 (L32), phases 3 and 1 (L31).'
+      description: 'Voltage between phases. A value for each phase pair: phases 1 and 2 (L12), phases 2 and 3 (L32), phases 3 and 1 (L31).'
 
       properties:
 
@@ -755,11 +715,7 @@ ThreePhaseAcMeasurement:
 
     phaseVoltage:
 
-      description: 'The voltage between each phase and neutral conductor. The actual
-
-        values will be conveyed by one subproperty per alternating current phase:
-
-        L1, L2 and L3'
+      description: 'The voltage between each phase and neutral conductor. The actual values will be conveyed by one subproperty per alternating current phase: L1, L2 and L3'
 
       properties:
 
@@ -791,9 +747,7 @@ ThreePhaseAcMeasurement:
 
     powerFactor:
 
-      description: 'Power factor for each phase. The actual values will be conveyed
-
-        by one subproperty per alternating current phase: L1, L2 and L3'
+      description: 'Power factor for each phase. The actual values will be conveyed by one subproperty per alternating current phase: L1, L2 and L3'
 
       properties:
 
@@ -831,13 +785,7 @@ ThreePhaseAcMeasurement:
 
     reactiveEnergyExport:
 
-      description: 'Fundamental frequency reactive energy exported per phase since
-
-        the metering start date. The actual values will be conveyed by subproperties
-
-        which names will be equal to the name of each of the alternating current phases:
-
-        L1, L2, L3.'
+      description: 'Fundamental frequency reactive energy exported per phase since the metering start date. The actual values will be conveyed by subproperties which names will be equal to the name of each of the alternating current phases: L1, L2, L3.'
 
       properties:
 
@@ -869,13 +817,7 @@ ThreePhaseAcMeasurement:
 
     reactiveEnergyImport:
 
-      description: 'Fundamental frequency reactive energy imported i.e. consumed per
-
-        phase since the metering start date. The actual values will be conveyed by
-
-        subproperties which names will be equal to the name of each of the alternating
-
-        current phases: L1, L2, L3.'
+      description: 'Fundamental frequency reactive energy imported i.e. consumed per phase since the metering start date. The actual values will be conveyed by subproperties which names will be equal to the name of each of the alternating current phases: L1, L2, L3.'
 
       properties:
 
@@ -907,11 +849,7 @@ ThreePhaseAcMeasurement:
 
     reactivePower:
 
-      description: 'Fundamental frequency reactive power. The actual values will be
-
-        conveyed by subproperties whose names will be equal to the name of each of
-
-        the alternating current phases: L1, L2, L3.'
+      description: 'Fundamental frequency reactive power. The actual values will be conveyed by subproperties whose names will be equal to the name of each of the alternating current phases: L1, L2, L3.'
 
       properties:
 
@@ -987,11 +925,7 @@ ThreePhaseAcMeasurement:
 
     thdCurrent:
 
-      description: 'Total harmonic distortion of electrical current. The actual values
-
-        will be conveyed by one subproperty per alternating current phase: L1, L2
-
-        and L3'
+      description: 'Total harmonic distortion of electrical current. The actual values will be conveyed by one subproperty per alternating current phase: L1, L2 and L3'
 
       properties:
 
@@ -1029,11 +963,7 @@ ThreePhaseAcMeasurement:
 
     thdVoltage:
 
-      description: 'Total harmonic distortion of voltage for each phase. The actual
-
-        values will be conveyed by one subproperty per alternating current phase:
-
-        L1, L2 and L3'
+      description: 'Total harmonic distortion of voltage for each phase. The actual values will be conveyed by one subproperty per alternating current phase: L1, L2 and L3'
 
       properties:
 
@@ -1085,9 +1015,7 @@ ThreePhaseAcMeasurement:
 
     totalActiveEnergyImport:
 
-      description: 'Total energy imported i.e. consumed since metering started (since
-
-        `dateEnergyMeteringStarted`).'
+      description: 'Total energy imported i.e. consumed since metering started (since `dateEnergyMeteringStarted`).'
 
       minimum: 0
 
@@ -1113,9 +1041,7 @@ ThreePhaseAcMeasurement:
 
     totalApparentEnergyExport:
 
-      description: 'Total energy exported (with regards to apparent power) since the
-
-        metering start date (`dateEnergyMeteringStarted`)'
+      description: 'Total energy exported (with regards to apparent power) since the metering start date (`dateEnergyMeteringStarted`)'
 
       minimum: 0
 
@@ -1129,9 +1055,7 @@ ThreePhaseAcMeasurement:
 
     totalApparentEnergyImport:
 
-      description: 'Total energy imported i.e. consumed (with regards to apparent
-
-        power) since the metering start date (`dateEnergyMeteringStarted`)'
+      description: 'Total energy imported i.e. consumed (with regards to apparent power) since the metering start date (`dateEnergyMeteringStarted`)'
 
       minimum: 0
 
@@ -1159,9 +1083,7 @@ ThreePhaseAcMeasurement:
 
     totalDisplacementPowerFactor:
 
-      description: 'Displacement power factor including all phases. The quantity is
-
-        based on the fundamental frequency of the system'
+      description: 'Displacement power factor including all phases. The quantity is based on the fundamental frequency of the system'
 
       maximum: 1
 
@@ -1193,9 +1115,7 @@ ThreePhaseAcMeasurement:
 
     totalReactiveEnergyExport:
 
-      description: 'Total fundamental frequency reactive energy exported since metering
-
-        started (since `dateEnergyMeteringStarted`).'
+      description: 'Total fundamental frequency reactive energy exported since metering started (since `dateEnergyMeteringStarted`).'
 
       minimum: 0
 
@@ -1209,9 +1129,7 @@ ThreePhaseAcMeasurement:
 
     totalReactiveEnergyImport:
 
-      description: 'Total energy imported i.e. consumed (with regards to fundamental
-
-        frequency reactive power) since the metering start date (`dateEnergyMeteringStarted`)'
+      description: 'Total energy imported i.e. consumed (with regards to fundamental frequency reactive power) since the metering start date (`dateEnergyMeteringStarted`)'
 
       minimum: 0
 
