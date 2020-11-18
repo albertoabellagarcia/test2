@@ -8,7 +8,7 @@ Global description: An electrical  measurement from a system that uses three pha
 ## Data Model
 
 
-```---
+```<br>---
 ThreePhaseAcMeasurement:
   description: 'An electrical  measurement from a system that uses three phase alternating current.'
   properties:
