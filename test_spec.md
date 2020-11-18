@@ -1,6 +1,6 @@
 
-ThreePhaseAcMeasurement specification
-=====================================
+Entity ThreePhaseAcMeasurement
+==============================
 
 
 Text to be included between overall title and description.  
@@ -8,8 +8,8 @@ Global description: An electrical  measurement from a system that uses three pha
 ## Data Model
 
 
----
-```ThreePhaseAcMeasurement:
+```---
+ThreePhaseAcMeasurement:
   description: 'An electrical  measurement from a system that uses three phase alternating current.'
   properties:
     activeEnergyExport:
@@ -588,9 +588,9 @@ Global description: An electrical  measurement from a system that uses three pha
   required:
     - id
     - type
-  type: object```
+  type: object
 Text to be included after list of properties
-NGSI V2 key-values Example
+```NGSI V2 key-values Example
 ```json
 {
   "id": "ThreePhaseAcMeasurement:LV3_Ventilation",
