@@ -1,13 +1,15 @@
 
-Entity ThreePhaseAcMeasurement
-==============================
+Entity: ThreePhaseAcMeasurement
+===============================
 
 
 Text to be included between overall title and description.  
   
 Global description: An electrical  measurement from a system that uses three phase alternating current.
-## Data Model
+## Data Model description of properties
 
+
+Ordered alphabetically
 
 ```<br>---
 ThreePhaseAcMeasurement:
