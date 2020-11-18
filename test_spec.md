@@ -7,7 +7,7 @@ Text to be included between overall title and description.
 
 An electrical  measurement from a system that uses three phase alternating current.
 # Data Model
-{   'activeEnergyExport': {   'description': 'Active energy exported per phase '
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp{   'activeEnergyExport': {   'description': 'Active energy exported per phase '
                                              'since the metering start date. '
                                              'The actual values will be '
                                              'conveyed by subproperties which '
