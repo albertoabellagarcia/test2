@@ -1,7 +1,9 @@
 
 Entity: Curve
 =============
-  
+
+
+Text to be included between overall title and description.  
   
 Global description: **This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.**
 ## Data Model description of properties
@@ -92,6 +94,7 @@ Curve:
     - xData
     - yData
   type: object
+Text to be included after list of properties
 ```
 
 ## Examples
@@ -234,3 +237,4 @@ NGSI-LD normalized Example
     ]
 }
 ```
+Text after  all
