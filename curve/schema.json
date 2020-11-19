@@ -18,12 +18,9 @@
         "curveType": {
           "allOf": [
             {
-              "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/curveType"
-            },
-            {
+              "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/curveType",
               "description": "Property. Entity curve type. Accepted Values:FLOW-HEAD, FLOW-EFFICIENCY, FLOW-HEADLOSS, LEVEL-VOLUME"
-            }
-          ]
+            }]
         },
         "xData": {
           "$ref": "https://raw.githubusercontent.com/smart-data-models/dataModel.WaterNetworkManagement/master/WaterNetworkManagement-schema.json#/definitions/ngsildProperty",
