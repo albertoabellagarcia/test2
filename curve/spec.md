@@ -9,7 +9,8 @@ Global description: **This entity contains a harmonised description of a generic
 ## Data Model description of properties
 
 
-```<br>---Ordered alphabetically
+Ordered alphabetically
+```<br>---
 Curve:
   description: 'This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
   properties:
