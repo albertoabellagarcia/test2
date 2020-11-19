@@ -1,7 +1,13 @@
 
 Entity: Curve
 =============
-
+  
+curveType:   
+description:   
+tag:   
+type: NGSI-LD Entity Type. It must be equal to Curve.  
+xData:   
+yData: 
 
 Text to be included between overall title and description.  
   
@@ -9,8 +15,7 @@ Global description: **This entity contains a harmonised description of a generic
 ## Data Model description of properties
 
 
-Ordered alphabetically
-```<br>---
+```yamlOrdered alphabetically
 Curve:
   description: 'This entity contains a harmonised description of a generic curve made for the Water Network Management domain. This entity is primarily associated with the water management vertical and related IoT applications.'
   properties:
@@ -96,7 +101,7 @@ Curve:
     - yData
   type: object
 Text to be included after list of properties
-```yaml
+```
 
 ## Examples
 NGSI V2 key-values Example
