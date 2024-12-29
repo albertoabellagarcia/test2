@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$schemaVersion" : "0.0.1",
+  "$schemaVersion" : "0.0.2",
   "$id": "https://smart-data-models.github.io/dataModel.User/Activity/schema.json",
-  "title": "FIWARE - User Activity schema",
+  "title": "SDM - User Activity schema",
   "description": "Information on the current activity performed by an anonymized user in a given point in time",
   "type": "object",
   "allOf": [
