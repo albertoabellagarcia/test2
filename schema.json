@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$schemaVersion" : "0.0.4",
+  "$schemaVersion" : "0.0.5",
   "$id": "https://smart-data-models.github.io/dataModel.User/Activity/schema.json",
   "title": "SDM - User Activity schema",
   "description": "Information on the current activity performed by an anonymized user in a given point in time",
